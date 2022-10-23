@@ -21,6 +21,7 @@ TCP는 TCP헤더와 클라이언트 데이터를 하나로 만들어 TCP 세그�
 #### TCP Segment Header
 
 ![](./tcp/pic2.png)
+
 [정보통신기술용어해설](http://www.ktword.co.kr/test/view/view.php?m_temp1=1889)
 
 번호화 시스템은 모든 데이터에 바이트 번호를 부여한다. 송신 순서 번호와 확인 응답 번호를 가진다. 세그먼트에 있는 첫 번째 바이트에 송신 순서 번호를 할당하고, 확인 응답 번호는 자신이 수신하기를 기대하는 다음 바이트 번호이다. TCP segment의 Sequence number이다.
@@ -64,6 +65,7 @@ tcp 프로토콜은 통신 중 오류가 발생하면 데이터를 재전송한�
 #### AIMD(Additive Increase / Mutipleicative Decrease)
 
 ![스크린샷 2022-10-23 오후 2.17.12.png](./tcp/pic3.png)
+
 [Tech Interview](https://gyoogle.dev/blog/computer-science/network/흐름제어%20&%20혼잡제어.html)
 
 패킷을 하나씩 보내고 문제없이 도착하면 윈도우 크기를 1씩 증가시키며 전송하는 기법이다. 패킷 전송에 실패하거나 일정 시간을 넘어가게되면, 패킷 전송 속도를 절반으로 줄인다. 초기에 네트워크가 혼잡해 지는 상황을 미리 감지하지 못하는 단점이 있다. 네트워크가 혼잡해지면 대역폭을 줄이는 방식이다.
